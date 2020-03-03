@@ -1,0 +1,161 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Assets/hotdog.png" type="Texture" id=2]
+[ext_resource path="res://Assets/road.png" type="Texture" id=3]
+[ext_resource path="res://Assets/sky.jpg" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 64, 55 )
+
+[node name="Game" type="Node"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 512, 320 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Player"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Roads" type="Node" parent="."]
+
+[node name="Road" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 64, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road"]
+shape = SubResource( 2 )
+
+[node name="Road2" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 192, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road2"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road2"]
+shape = SubResource( 2 )
+
+[node name="Road3" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 320, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road3"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road3"]
+shape = SubResource( 2 )
+
+[node name="Road4" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 448, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road4"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road4"]
+shape = SubResource( 2 )
+
+[node name="Road5" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 576, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road5"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road5"]
+shape = SubResource( 2 )
+
+[node name="Road6" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 704, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road6"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road6"]
+shape = SubResource( 2 )
+
+[node name="Road7" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 832, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road7"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road7"]
+shape = SubResource( 2 )
+
+[node name="Road8" type="StaticBody2D" parent="Roads"]
+editor/display_folded = true
+visible = false
+position = Vector2( 960, 512 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Roads/Road8"]
+scale = Vector2( 1, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roads/Road8"]
+shape = SubResource( 2 )
+
+[node name="Background" type="Node" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Background"]
+self_modulate = Color( 1, 1, 1, 0.137255 )
+show_behind_parent = true
+light_mask = 0
+position = Vector2( 512, 288 )
+scale = Vector2( 1.7415, 2.10068 )
+texture = ExtResource( 4 )
