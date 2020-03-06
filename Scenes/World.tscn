@@ -1,0 +1,81 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scenes/KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Zombies/Jump4.png" type="Texture" id=2]
+[ext_resource path="res://Zombies/Jump1.png" type="Texture" id=3]
+[ext_resource path="res://Zombies/Jump3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Idle3.png" type="Texture" id=5]
+[ext_resource path="res://Zombies/Run1.png" type="Texture" id=6]
+[ext_resource path="res://Zombies/Run2.png" type="Texture" id=7]
+[ext_resource path="res://Zombies/Run3.png" type="Texture" id=8]
+[ext_resource path="res://Zombies/Run4.png" type="Texture" id=9]
+[ext_resource path="res://Zombies/Run5.png" type="Texture" id=10]
+[ext_resource path="res://Zombies/Run6.png" type="Texture" id=11]
+[ext_resource path="res://Zombies/Run7.png" type="Texture" id=12]
+[ext_resource path="res://Zombies/Run9.png" type="Texture" id=13]
+[ext_resource path="res://Zombies/Run10.png" type="Texture" id=14]
+[ext_resource path="res://Zombies/Run8.png" type="Texture" id=15]
+[ext_resource path="res://TileSet.tres" type="TileSet" id=16]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 14.0
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 288, 64 )
+
+[node name="World" type="Node"]
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 288, 128 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="Player"]
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 2 )
+animation = "Idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 4 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 16 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131074, 0, 0, 131075, 1, 0, 131076, 2, 0, 196610, 1610612738, 0, 196611, 1610612737, 0, 196612, 1610612736, 0, 262159, 0, 0, 262160, 1, 0, 262161, 2, 0, 327688, 1610612736, 0, 327689, 1610612736, 0, 327695, 4, 0, 327696, 8, 0, 327697, 5, 0, 393231, 4, 0, 393232, 8, 0, 393233, 5, 0, 458767, 4, 0, 458768, 8, 0, 458769, 5, 0, 524289, 0, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 524306, 2, 0, 589825, 4, 0, 589826, 7, 0, 589827, 7, 0, 589828, 7, 0, 589829, 7, 0, 589830, 7, 0, 589831, 7, 0, 589832, 7, 0, 589833, 7, 0, 589834, 7, 0, 589835, 7, 0, 589836, 7, 0, 589837, 7, 0, 589838, 7, 0, 589839, 7, 0, 589840, 7, 0, 589841, 7, 0, 589842, 5, 0, 655361, 1610612738, 0, 655362, 1610612737, 0, 655363, 1610612737, 0, 655364, 1610612737, 0, 655365, 1610612737, 0, 655366, 1610612737, 0, 655367, 1610612737, 0, 655368, 1610612737, 0, 655369, 1610612737, 0, 655370, 1610612737, 0, 655371, 1610612737, 0, 655372, 1610612737, 0, 655373, 1610612737, 0, 655374, 1610612737, 0, 655375, 1610612737, 0, 655376, 1610612737, 0, 655377, 1610612737, 0, 655378, 1610612736, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 320, 320 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
