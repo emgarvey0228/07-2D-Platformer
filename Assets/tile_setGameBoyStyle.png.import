@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.png-5fe826d179e8297c657fd07c30124f2f.stex"
+path="res://.import/tile_setGameBoyStyle.png-a060ef6c209dcb8e497b669739960287.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player.png"
-dest_files=[ "res://.import/player.png-5fe826d179e8297c657fd07c30124f2f.stex" ]
+source_file="res://Assets/tile_setGameBoyStyle.png"
+dest_files=[ "res://.import/tile_setGameBoyStyle.png-a060ef6c209dcb8e497b669739960287.stex" ]
 
 [params]
 
