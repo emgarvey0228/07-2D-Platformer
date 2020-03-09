@@ -15,7 +15,10 @@
 [ext_resource path="res://Zombies/Jump3.png" type="Texture" id=13]
 [ext_resource path="res://Zombies/Jump4.png" type="Texture" id=14]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 64 )
+
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
@@ -38,21 +41,18 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 32, 64 )
-
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 1 )
-animation = "Idle"
-playing = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 0.9, 0.6 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 2 )
+animation = "Idle"
+playing = true

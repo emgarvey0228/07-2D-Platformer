@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Halloween .wav-b02e04bea27cffcdd3a50f378fd307de.sample"
+
+[deps]
+
+source_file="res://Assets/Halloween .wav"
+dest_files=[ "res://.import/Halloween .wav-b02e04bea27cffcdd3a50f378fd307de.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
