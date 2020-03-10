@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="Numbers" type="CanvasLayer"]
+
+[node name="Score" type="Label" parent="."]
+margin_top = 14.0
+margin_right = 45.0
+margin_bottom = 28.0
+text = "SCORE:"
+
+[node name="Lives" type="Label" parent="."]
+margin_right = 66.0
+margin_bottom = 14.0
+text = "HEALTH: 3"

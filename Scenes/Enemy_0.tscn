@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/Enemy_0.gd" type="Script" id=1]
+[ext_resource path="res://Zombies/zombie2.1.png" type="Texture" id=2]
+[ext_resource path="res://Zombies/zombie2.2.png" type="Texture" id=3]
+[ext_resource path="res://Zombies/zombie2.4.png" type="Texture" id=4]
+[ext_resource path="res://Zombies/zombie2.3.png" type="Texture" id=5]
+[ext_resource path="res://Zombies/zombie2.5.png" type="Texture" id=6]
+[ext_resource path="res://Zombies/zombie2.6.png" type="Texture" id=7]
+[ext_resource path="res://Zombies/Idle2.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21, 39 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
+[node name="Enemy_0" type="KinematicBody2D"]
+position = Vector2( 364.5, 256 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 2 )
+animation = "Walk"
+frame = 5
