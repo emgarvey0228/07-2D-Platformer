@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/spooky.jpg" type="Texture" id=1]
 [ext_resource path="res://FloorTileSet.tres" type="TileSet" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Enemy_0.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Halloween .wav" type="AudioStream" id=7]
-[ext_resource path="res://Scenes/Numbers.tscn" type="PackedScene" id=8]
 
 [node name="World2" type="Node"]
 
@@ -41,7 +40,6 @@ position = Vector2( 576, 256 )
 world_scene = "res://Scenes/World.tscn"
 
 [node name="Enemy0" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Enemy_0" parent="Enemy0" instance=ExtResource( 6 )]
 position = Vector2( 192, 256 )
@@ -51,4 +49,9 @@ scale = Vector2( 0.8, 0.8 )
 stream = ExtResource( 7 )
 autoplay = true
 
-[node name="Numbers" parent="." instance=ExtResource( 8 )]
+[node name="Score" type="Label" parent="."]
+margin_left = 561.0
+margin_top = 1.05002
+margin_right = 620.0
+margin_bottom = 15.05
+text = "Score: 50"
