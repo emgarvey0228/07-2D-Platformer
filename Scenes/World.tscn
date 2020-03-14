@@ -28,7 +28,6 @@ wait_time = 0.8
 one_shot = true
 
 [node name="TileMap" type="TileMap" parent="."]
-editor/display_folded = true
 position = Vector2( 320, 192 )
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 32, 32 )
@@ -51,8 +50,8 @@ position = Vector2( 130.72, 33.76 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Score" type="Label" parent="."]
-margin_left = 576.0
-margin_top = 3.51999
-margin_right = 616.0
-margin_bottom = 17.52
+margin_left = 544.0
+margin_top = 17.52
+margin_right = 595.0
+margin_bottom = 31.52
 text = "Score: 0"

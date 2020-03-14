@@ -50,8 +50,8 @@ stream = ExtResource( 7 )
 autoplay = true
 
 [node name="Score" type="Label" parent="."]
-margin_left = 561.0
-margin_top = 1.05002
-margin_right = 620.0
-margin_bottom = 15.05
+margin_left = 544.0
+margin_top = 15.05
+margin_right = 603.0
+margin_bottom = 29.05
 text = "Score: 50"
